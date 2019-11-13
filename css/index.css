@@ -1,0 +1,128 @@
+/* Content */
+.content {
+    position:relative;
+    top:0;
+    left:0;
+}
+
+
+/* Content - figure */
+.figure {
+    clear:both;
+    position:relative;
+    top:0;
+    left:0;
+    z-index:-9999;
+    margin-top:-30px;
+}
+
+
+/* Content - typo */
+#typo {
+    clear:both;
+    margin-top:270px;
+    text-align:center;
+    font-size:75px;
+    line-height:110px;
+    letter-spacing:10px;
+    position:absolute;
+    top:0;
+    left:30%;
+    z-index:9999;
+}
+
+
+/* Content - typing */
+#typing {
+    font-weight:600;
+}
+
+#typing h1 {
+    color:#4D4D4D;
+    font-size:75px;
+    text-align:center;
+    line-height:1em;
+    letter-spacing:10px;
+    height:1em;
+    position:absolute;
+    left:0%;
+    display:inline-block;
+    -moz-transform:translate(0%, -50%);
+    -ms-transform:translate(0%, -50%);
+    -webkit-transform:translate(0%, -50%);
+    transform:translate(0%, -50%);
+}
+  
+#content {
+    position:absolute;
+    list-style:none;
+    display:inline-block;
+    overflow:hidden;
+    left:100%;
+    top:0;
+    white-space:nowrap;
+    height:200px;
+}
+  
+#content li {
+    display:none;
+    position:relative;
+    line-height:100%;
+    padding-left:10px;
+}
+  
+#content li.active {
+    display:inline-block;
+}
+  
+#content li.active.typing {
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity:0;
+}
+  
+#content .fakeContent {
+    position:absolute;
+    display:inline-block;
+    left:0;
+    top:0;
+    height:1em;
+    padding-left:10px;
+}
+  
+#content .fakeContent:after {
+    content:'';
+    position:absolute;
+    width:100vw;
+    height:1em;
+    left:calc(100% - 0.1em);
+    top:0;
+    z-index:-2;
+    background-color:rgba(242, 106, 11, 0.4);
+    -moz-background-clip:padding;
+    -o-background-clip:padding-box;
+    -webkit-background-clip:padding;
+    background-clip:padding-box;
+}
+  
+#content .fakeContent.typing:after {
+    background-color:transparent;
+    left:100%;
+}
+
+.text {
+    font-weight:600;
+    margin-top:50px;
+}
+
+
+/* Footer */
+footer {
+    margin-top:-25px;
+    margin-right:60px;
+    text-align:right;
+    color:rgba(77, 77, 77, 0.9);
+    font-family:'Lato', sans-serif;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:0.5px;
+}
