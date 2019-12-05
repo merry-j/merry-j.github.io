@@ -16,6 +16,32 @@
     margin-top:-30px;
 }
 
+.st1, .st2, .st4, .st5, .st6, .st7 {
+    opacity:0;
+}
+
+@keyframes svgAni {
+    from {
+      stroke-dashoffset:500;
+      opacity:0;
+    }
+    to {
+      stroke-dashoffset:0;
+      opacity:0.4;
+    }
+}
+
+@keyframes svgAni2 {
+    from {
+      stroke-dashoffset:500;
+      opacity:0;
+    }
+    to {
+      stroke-dashoffset:0;
+      opacity:1;
+    }
+}
+
 
 /* Content - profile */
 .profile {
