@@ -1,0 +1,401 @@
+/* body */
+body {
+    /* burgerMenu 때문에 벗어난 영역을 숨김 */
+    overflow-x:hidden;
+}
+
+
+/* header */
+nav {
+    /* 네비게이션이 맨 위로 올 수 있도록 함 */
+    position:absolute;
+    z-index:9999;
+}
+
+
+/* content */
+#content {
+    position:relative;
+    min-height:794px;
+}
+
+/* food first title - background-image 삽입 */
+#content .food {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    background:url('../images/food.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+    background-attachment:fixed;
+}
+
+/* food first title text */
+#content .food .subject1 {
+    color:#ffe0e0;
+    opacity:0.8;
+    font-size:80px;
+    font-family:'Palanquin Dark', sans-serif;
+    letter-spacing:5px;
+    margin-top:360px;
+    text-align:center;
+}
+
+
+/* contatiner - 콘텐츠 영역 전체*/
+#container {
+    margin-top:250px;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+}
+/* contatiner - mediaquery (기존 스타일을 Desktop 우선으로 작성했으므로 다른 크기의 화면에서 사용될 스타일 작성) */
+@media screen and (max-width:768px) {
+    #container {
+        margin-top:200px;
+    }
+}
+        
+
+/* food second title */
+#wrapper1 {
+    position:relative;
+    text-align:center;
+}
+
+/* food second title - 주제 */
+#wrapper1 span {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:15px;
+    color:white;
+    background-color:#fada9d;
+    padding:0 6px 0;
+}
+
+/* food second title - 주제 간략하게 설명 */
+#wrapper1 p {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:35px;
+    color:#2d2d2d;
+    margin-top:30px;
+}
+
+/* food second title - 콘텐츠 영역 전체 - background-image 삽입 */
+#wrapper1 .tag {
+    position:relative;
+    left:50%;
+    transform:translate(-50%, -50%);
+    height:600px;
+    text-align:center;
+    background:url('../images/food_image.jpg') no-repeat;
+    background-position:center bottom;
+    background-size:cover;
+    margin-top:50px;
+}
+
+/* food second title - 부가 설명 콘텐츠로 이동할 수 있게 함 */
+#wrapper1 .tag a {
+    color:#ffe0e0;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:30px;
+    text-decoration:none;
+    line-height:140px;
+}
+/* food second title - 마우스 오버 효과 */
+#wrapper1 .tag a:hover {
+    color:#ff8784;
+    transition:all 0.8s ease;
+}
+#wrapper1 .tag a:visited {
+    color:#e8c0be;
+}
+
+/* food second title - 콘텐츠 영역 전체 */
+#wrapper1 .tagWrap {
+    width:1000px;
+    margin:380px auto 0;
+}
+
+/*food second title - 제목 */
+#wrapper1 .tag1, #wrapper1 .tag2,
+#wrapper1 .tag3, #wrapper1 .tag4 {
+    display:inline-block;
+    width:180px;
+    margin:115px 20px 0;
+    border:1px solid white;
+    text-align:center;
+}
+
+/* food second title - 아이콘 삽입 */
+#wrapper1 .tag img {
+    width:50px;
+    height:50px;
+}
+
+/* food second title - 설명 */
+#wrapper1 .tag1 p, #wrapper1 .tag2 p,
+#wrapper1 .tag3 p, #wrapper1 .tag4 p {
+    width:100px;
+    color:white;
+    font-size:11px;
+    line-height:20px;
+    margin:30px auto 45px;
+    text-align:justify;
+}
+
+/* food second title - mediaquery */
+@media screen and (max-width:768px) {
+    /* food second title - 부가 설명 콘텐츠로 이동할 수 있게 함 */
+    #wrapper1 .tag a {
+        font-size:20px;
+    }
+    
+    /* food second title - 콘텐츠 영역 전체 */
+    #wrapper1 .tagWrap {
+        width:750px;
+        margin:380px auto 0;
+    }
+    
+    /*food second title - 제목 */
+    #wrapper1 .tag1, #wrapper1 .tag2,
+    #wrapper1 .tag3, #wrapper1 .tag4 {
+        width:140px;
+        margin:115px 5px 0;
+    }
+}
+
+
+/* food content _ wrapper2 - 콘텐츠 영역 전체 */
+#wrapper2 {
+    position:relative;
+    width:1000px;
+    margin:0 auto;
+}
+
+/* food content 1-1 - 이미지 */
+#wrapper2 .food1 {
+    position:absolute;
+    left:70px;
+    width:465px;
+    height:350px;
+}
+
+/* food content 1-2 - 이미지 */
+#wrapper2 .food2 {
+    position:absolute;
+    right:70px;
+    width:370px;
+    height:160px;
+}
+
+/* food content 1 - 이름 */
+#wrapper2 .food3 {
+    position:absolute;
+    top:180px;
+    right:70px;
+    width:200px;
+    height:160px;
+    border:5px solid #fada9d;
+}
+#wrapper2 .food3 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:50px auto 0;
+}
+/* food content 1 - 마우스 오버 효과 */
+#wrapper2 .food3 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .food3 a:visited {
+    color:#c6c6c6;
+}
+
+/* food content 2 - 이름 */
+#wrapper2 .food4 {
+    position:absolute;
+    top:375px;
+    left:70px;
+    width:200px;
+    height:160px;
+    border:5px solid #fada9d;
+}
+#wrapper2 .food4 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:65px auto 0;
+}
+/* food content 2 - 마우스 오버 효과 */
+#wrapper2 .food4 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .food4 a:visited {
+    color:#c6c6c6;
+}
+
+/* food content 2 - 이미지 */
+#wrapper2 .food5 {
+    position:absolute;
+    top:375px;
+    left:305px;
+    width:370px;
+    height:170px;
+}
+
+/* food content 3 - 이름 */
+#wrapper2 .food6 {
+    position:absolute;
+    top:570px;
+    left:305px;
+    width:200px;
+    height:160px;
+    border:5px solid #fada9d;
+}
+#wrapper2 .food6 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:50px auto 0;
+}
+/* food content 3 - 마우스 오버 효과 */
+#wrapper2 .food6 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .food6 a:visited {
+    color:#c6c6c6;
+}
+
+/* food content 3 - 이미지 */
+#wrapper2 .food7 {
+    position:absolute;
+    top:570px;
+    right:70px;
+    width:390px;
+    height:170px;
+}
+
+/* food content 4 - 이미지 */
+#wrapper2 .food8 {
+    position:absolute;
+    top:765px;
+    left:70px;
+    width:370px;
+    height:170px;
+}
+
+/* food content 4 - 이름 */
+#wrapper2 .food9 {
+    position:absolute;
+    top:765px;
+    right:70px;
+    width:200px;
+    height:160px;
+    border:5px solid #fada9d;
+}
+#wrapper2 .food9 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:50px auto 0;
+}
+/* food content 4 - 마우스 오버 효과 */
+#wrapper2 .food9 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .food9 a:visited {
+    color:#c6c6c6;
+}
+
+/* food content - mediaquery */
+@media screen and (max-width:768px) {
+    /* food content _ wrapper2 - 콘텐츠 영역 전체 */
+    #wrapper2 {
+        width:750px;
+        margin:-100px auto 0;
+    }
+    
+    /* food content 1-1 - 이미지 */
+    #wrapper2 .food1 {
+        left:70px;
+        width:350px;
+        height:350px;
+    }
+    
+    /* food content 1-2 - 이미지 */
+    #wrapper2 .food2 {
+        right:70px;
+        width:235px;
+    }
+    
+    /* food content 1 - 이름 */
+    #wrapper2 .food3 {
+        top:180px;
+        right:70px;
+        width:110px;
+    }
+    #wrapper2 .food3 a {
+        width:110px;
+        font-size:15px;
+        line-height:25px;
+        margin:55px auto 0;
+    }
+    
+    /* food content 2 - 이미지 */
+    #wrapper2 .food5 {
+        width:375px;
+    }
+    
+    /* food content 3 - 이름 */
+    #wrapper2 .food6 {
+        left:70px;
+    }
+    
+    /* food content 3 - 이미지 */
+    #wrapper2 .food7 {
+        right:70px;
+        width:375px;
+    }
+    
+    /* food content 4 - 이미지 */
+    #wrapper2 .food8 {
+        width:375px;
+    }
+}
+
+
+/* footer */
+footer {
+    margin-top:1250px;
+}
+
+/* footer - mediaquery*/
+@media screen and (max-width:768px) {
+    footer {
+        margin-top:1150px;
+    }
+}

@@ -1,0 +1,402 @@
+/* body */
+body {
+    /* burgerMenu 때문에 벗어난 영역을 숨김 */
+    overflow-x:hidden;
+}
+
+
+/* header */
+nav {
+    /* 네비게이션이 맨 위로 올 수 있도록 함 */
+    position:absolute;
+    z-index:9999;
+}
+
+
+/* content */
+#content {
+    position:relative;
+    min-height:794px;
+}
+
+/* dessert first title - background-image 삽입 */
+#content .dessert {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    background:url('../images/dessert.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+    background-attachment:fixed;
+}
+
+/* dessert first title text */
+#content .dessert .subject1 {
+    color:#ffe0e0;
+    opacity:0.8;
+    font-size:80px;
+    font-family:'Palanquin Dark', sans-serif;
+    letter-spacing:5px;
+    margin-top:360px;
+    text-align:center;
+}
+
+
+/* contatiner - 콘텐츠 영역 전체 */
+#container {
+    margin-top:250px;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+}
+
+/* contatiner - mediaquery (기존 스타일을 Desktop 우선으로 작성했으므로 다른 크기의 화면에서 사용될 스타일 작성) */
+@media screen and (max-width:768px) {
+    #container {
+        margin-top:200px;
+    }
+}
+          
+
+/* dessert second title */
+#wrapper1 {
+    position:relative;
+    text-align:center;
+}
+
+/* dessert second title - 주제 */
+#wrapper1 span {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:15px;
+    color:white;
+    background-color:#daceeb;
+    padding:0 6px 0;
+}
+
+/* dessert second title - 주제 간략하게 설명 */
+#wrapper1 p {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:35px;
+    color:#2d2d2d;
+    margin-top:30px;
+}
+
+/* dessert second title - 콘텐츠 영역 전체 - background-image 삽입 */
+#wrapper1 .tag {
+    position:relative;
+    left:50%;
+    transform:translate(-50%, -50%);
+    height:600px;
+    text-align:center;
+    background:url('../images/dessert_image.jpg') no-repeat;
+    background-position:center bottom;
+    background-size:cover;
+    margin-top:50px;
+}
+
+/* dessert second title - 부가 설명 콘텐츠로 이동할 수 있게 함 */
+#wrapper1 .tag a {
+    color:#ffe0e0;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:30px;
+    text-decoration:none;
+    line-height:140px;
+}
+/* dessert second title - 마우스 오버 효과 */
+#wrapper1 .tag a:hover {
+    color:#ff8784;
+    transition:all 0.8s ease;
+}
+#wrapper1 .tag a:visited {
+    color:#e8c0be;
+}
+
+/* dessert second title - 콘텐츠 영역 전체 */
+#wrapper1 .tagWrap {
+    width:1000px;
+    margin:380px auto 0;
+}
+
+/* dessert second title - 제목 */
+#wrapper1 .tag1, #wrapper1 .tag2,
+#wrapper1 .tag3, #wrapper1 .tag4 {
+    display:inline-block;
+    width:180px;
+    margin:115px 20px 0;
+    border:1px solid white;
+    text-align:center;
+}
+
+/* dessert second title - 아이콘 */
+#wrapper1 .tag img {
+    width:50px;
+    height:50px;
+}
+
+/* dessert second title - 설명 */
+#wrapper1 .tag1 p, #wrapper1 .tag2 p,
+#wrapper1 .tag3 p, #wrapper1 .tag4 p {
+    width:100px;
+    color:white;
+    font-size:11px;
+    line-height:20px;
+    margin:30px auto 45px;
+    text-align:justify;
+}
+
+/* dessert second title - mediaquery */
+@media screen and (max-width:768px) {
+    /* dessert second title - 부가 설명 콘텐츠로 이동할 수 있게 함 */
+    #wrapper1 .tag a {
+        font-size:20px;
+    }
+    
+    /* dessert second title - 콘텐츠 영역 전체 */
+    #wrapper1 .tagWrap {
+        width:750px;
+        margin:380px auto 0;
+    }
+    
+    /* dessert second title - 제목 */
+    #wrapper1 .tag1, #wrapper1 .tag2,
+    #wrapper1 .tag3, #wrapper1 .tag4 {
+        width:140px;
+        margin:115px 5px 0;
+    }
+}
+
+
+/* dessert content _ wrapper2 - 콘텐츠 영역 전체 */
+#wrapper2 {
+    position:relative;
+    width:1000px;
+    margin:0 auto;
+}
+
+/* dessert content 1-1 - 이미지 */
+#wrapper2 .dessert1 {
+    position:absolute;
+    left:70px;
+    width:465px;
+    height:350px;
+}
+
+/* dessert content 1-2 - 이미지 */
+#wrapper2 .dessert2 {
+    position:absolute;
+    right:70px;
+    width:370px;
+    height:160px;
+}
+
+/* dessert content 1 - 이름 */
+#wrapper2 .dessert3 {
+    position:absolute;
+    top:180px;
+    right:70px;
+    width:200px;
+    height:160px;
+    border:5px solid #daceeb;
+}
+#wrapper2 .dessert3 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:50px auto 0;
+}
+/* dessert content 1 - 마우스 오버 효과 */
+#wrapper2 .dessert3 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .dessert3 a:visited {
+    color:#c6c6c6;
+}
+
+/* dessert content 2 - 이름 */
+#wrapper2 .dessert4 {
+    position:absolute;
+    top:375px;
+    left:70px;
+    width:200px;
+    height:160px;
+    border:5px solid #daceeb;
+}
+#wrapper2 .dessert4 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:65px auto 0;
+}
+/* dessert content 2 - 마우스 오버 효과 */
+#wrapper2 .dessert4 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .dessert4 a:visited {
+    color:#c6c6c6;
+}
+
+/* dessert content 2 - 이미지 */
+#wrapper2 .dessert5 {
+    position:absolute;
+    top:375px;
+    left:305px;
+    width:370px;
+    height:170px;
+}
+
+/* dessert content 3 - 이름 */
+#wrapper2 .dessert6 {
+    position:absolute;
+    top:570px;
+    left:305px;
+    width:200px;
+    height:160px;
+    border:5px solid #daceeb;
+}
+#wrapper2 .dessert6 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:50px auto 0;
+}
+/* dessert content 3 - 마우스 오버 효과 */
+#wrapper2 .dessert6 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .dessert6 a:visited {
+    color:#c6c6c6;
+}
+
+/* dessert content 3 - 이미지 */
+#wrapper2 .dessert7 {
+    position:absolute;
+    top:570px;
+    right:70px;
+    width:390px;
+    height:170px;
+}
+
+/* dessert content 4 - 이미지 */
+#wrapper2 .dessert8 {
+    position:absolute;
+    top:765px;
+    left:70px;
+    width:370px;
+    height:170px;
+}
+
+/* dessert content 4 - 이름 */
+#wrapper2 .dessert9 {
+    position:absolute;
+    top:765px;
+    right:70px;
+    width:200px;
+    height:160px;
+    border:5px solid #daceeb;
+}
+#wrapper2 .dessert9 a {
+    display:block;
+    width:150px;
+    color:#5b5b5b;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+    margin:50px auto 0;
+}
+/* dessert content 4 - 마우스 오버 효과 */
+#wrapper2 .dessert9 a:hover {
+    color:#9b9b9b;
+    transition:all 0.8s ease;
+}
+#wrapper2 .dessert9 a:visited {
+    color:#c6c6c6;
+}
+
+/* dessert content - mediaquery */
+@media screen and (max-width:768px) {
+    /* dessert content _ wrapper2 - 콘텐츠 영역 전체 */
+    #wrapper2 {
+        width:750px;
+        margin:-100px auto 0;
+    }
+    
+    /* dessert content 1-1 - 이미지 */
+    #wrapper2 .dessert1 {
+        left:70px;
+        width:350px;
+        height:350px;
+    }
+    
+    /* dessert content 1-2 - 이미지 */
+    #wrapper2 .dessert2 {
+        right:70px;
+        width:235px;
+    }
+    
+    /* dessert content 1 - 이름 */
+    #wrapper2 .dessert3 {
+        top:180px;
+        right:70px;
+        width:110px;
+    }
+    #wrapper2 .dessert3 a {
+        width:110px;
+        font-size:15px;
+        line-height:25px;
+        margin:55px auto 0;
+    }
+    
+    /* dessert content 2 - 이미지 */
+    #wrapper2 .dessert5 {
+        width:375px;
+    }
+    
+    /* dessert content 3 - 이름 */
+    #wrapper2 .dessert6 {
+        left:70px;
+    }
+    
+    /* dessert content 3 - 이미지 */
+    #wrapper2 .dessert7 {
+        right:70px;
+        width:375px;
+    }
+    
+    /* dessert content 4 - 이미지 */
+    #wrapper2 .dessert8 {
+        width:375px;
+    }
+}
+
+
+/* footer */
+footer {
+    margin-top:1250px;
+}
+
+/* footer - mediaquery */
+@media screen and (max-width:768px) {
+    footer {
+        margin-top:1150px;
+    }
+}

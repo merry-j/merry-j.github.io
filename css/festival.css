@@ -1,0 +1,168 @@
+/* body */
+body {
+    /* burgerMenu 때문에 벗어난 영역을 숨김 */
+    overflow-x:hidden;
+    font-family:'Nanum Gothic', sans-serif;
+    background:url('../images/festival.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+}
+
+
+/* content - 콘텐츠 영역 전체 */
+#content {
+    position:relative;
+    padding-bottom:180px;
+}
+
+/* festival title - 제목 영역 */
+#content .festival .subject1 {
+    margin-top:185px;
+    margin-left:80px;
+}
+
+/* festival title - 제목 밑에 직선*/
+#content .festival .subject1:after {
+    content:'';
+    display:block;
+    width:110px;
+    opacity:0.7;
+    border-bottom:8px solid #ffe0e0;
+    padding-top:30px;
+}
+
+/* festival title - 제목 */
+#content .festival .subject1 a {
+    color:#ffe0e0;
+    opacity:0.7;
+    font-size:80px;
+    font-family:'Palanquin Dark', sans-serif;
+    letter-spacing:5px;
+    text-decoration:none;
+}
+/* festival title - 마우스 오버 효과 */
+#content .festival .subject1 a:hover {
+    color:#ff8784;
+    transition:all 0.8s ease;
+}
+
+/* festival title - 설명 */
+#content .festival .message {
+    font-size:13px;
+    color:#ffeded;
+    line-height:22px;
+    margin-top:30px;
+    margin-left:80px;
+}
+
+/* festival title - mediaquery */
+@media screen and (min-width:769px) and (max-width:1024px) {
+    /* festival title - 설명 */
+    #content .festival .message {
+        font-size:11px;
+        color:#ffeded;
+        line-height:22px;
+        margin-top:30px;
+        margin-left:80px;
+    }
+}
+@media screen and (min-width:361px) and (max-width:768px) {
+    /* festival title - 제목 */
+    #content .festival .subject1 a {
+        font-size:60px;
+    }
+}
+@media screen and (max-width:360px) {
+    /* content - 콘텐츠 영역 전체 */
+    #content {
+        padding-bottom:270px;
+    }
+    
+    /* festival title - 제목 영역 */
+    #content .festival .subject1 {
+        margin-top:280px;
+        margin-left:25px;
+    }
+    
+    /* festival title - 제목 */
+    #content .festival .subject1 a {
+        font-size:30px;
+    }
+    
+    /* festival title - 제목 밑에 직선*/
+    #content .festival .subject1:after {
+        content:'';
+        display:none;
+    }
+    
+    /* festival title - 설명 */
+    #content .festival .message {
+        display:none;
+    }
+}
+
+
+/* footer */
+footer {
+    width:100%;
+    height:80px;
+}
+#footer {
+    padding-top:15px;
+    padding-left:70px;
+}
+#footer li {
+    display:inline;
+    padding:0 18px;
+    list-style-type:none;
+}
+
+/* footer - sns icon */
+#footer li .fab {
+    color:#ffe4e2;
+    font-size:25px;
+    opacity:0.8;
+}
+/* footer - sns icon - 마우스 오버 효과 */
+#footer li:first-child .fab:hover {
+    color:#3b5998;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li:nth-child(2) .fab:hover {
+    color:#cd486b;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li:nth-child(3) .fab:hover {
+    color:#c8232c;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li:nth-child(4) .fab:hover {
+    color:#86c9ef;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li .fab:visited {
+    color:#e8c0be;
+}
+
+/* footer - copyright*/
+#footer li:last-child {
+    display:inline-block;
+    float:right;
+    color:#ffe4e2;
+    font-family:'Quicksand', sans-serif;
+    font-size:15px;
+    opacity:0.8;
+    line-height:25px;
+    margin-right:50px;
+}
+
+/* footer - mediaquery */
+@media screen and (max-width:1024px) {
+    #footer {
+        display:none;
+    }
+}

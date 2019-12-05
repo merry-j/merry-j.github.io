@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+/* nav - burger menu */
+#burgerMenu a {
+    font-family:'Fjalla One', sans-serif;
+    letter-spacing:2px;
+    text-decoration:none;
+    color:#2d2d2d;
+    font-size:25px;
+    line-height:55px;
+}
+
+/* burger menu - 버튼 영역 */
+.btn-menu {
+    float:right;
+    display:block;
+    position:relative;
+    width:60px;
+    height:60px;
+    padding:15px;
+    cursor:pointer;
+    box-sizing:border-box;
+    transition:background-color 200ms ease-in-out;
+}
+/* burger menu - 버튼 마우스 오버 효과 */
+.btn-menu:hover {
+    color:#ffbcba;
+}
+
+/* burger menu - 버튼 선 생성 */
+.btn-menu span {
+    display:block;
+    position:absolute;
+    top:80%;
+    right:80%;
+    width:calc(100% - 30px);
+    height:0;
+    border-bottom:2px solid #ffe0e0;
+    transform:translateY(-50%);
+    transition:border-color 250ms ease-in-out;
+}
+/* burger menu - 버튼 선 생성 - 가상 요소로 위, 아래에 선 생성 */
+.btn-menu span:before, .btn-menu span:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    width:100%;
+    height:0;
+    border-bottom:2px solid #ffe0e0;
+    transition:border-color 250ms ease-in-out;
+}
+.btn-menu span:before {
+    transform:translateY(-8px);
+}
+.btn-menu span:after {
+    transform:translateY(8px);
+}
+/* burger menu - 버튼 선 생성 - 마우스 오버 효과 */
+.btn-menu:hover span,
+.btn-menu:hover span:before,
+.btn-menu:hover span:after {
+    border-color:#fff;
+}
+
+/* side menu - 메뉴 영역 */
+.side-menu {
+    position:absolute;
+    z-index:1000;
+    top:0;
+    right:0;
+    width:250px;
+    height:100%;
+    background-color:#ffe0e0;
+    box-shadow:-1px 0 2px rgba(0, 0, 0, 0.15);
+    transform:translate(100%);
+    transition:transform 400ms ease-in-out;
+}
+
+/* side menu - 메뉴 열었을 때 X 좌표 위치 */
+.side-menu.open {
+    transform:translateX(0);
+}
+
+/* side menu - 메뉴 제목 영역 */
+.side-menu .burgerList {
+    margin-top:60px;
+    padding-left:40px;
+}
+.side-menu .burgerList li+li {
+    padding-top:10px;
+}
+.side-menu .burgerList li a {
+    display:inline-block;
+    position:relative;
+    vertical-align:top;
+    color:#222;
+    font-size:20px;
+    font-weight:500;
+    line-height:30px;
+    opacity:0;
+    color:#ff9b3f;
+}
+/* side menu - 메뉴 제목 누를 시 애니메이션 효과 */
+.side-menu.open .burgerList li.ani a {
+    opacity:1.0;
+    color:#222;
+    animation:menu 250ms ease-in-out;
+}
+@keyframes menu {
+    0% {
+        opacity:0;
+        color:#ff9b3f;
+    }
+    40% {
+        color:#ff9b3f;
+    }
+    100% {
+        opacity:1.0;
+        color:#222;
+    }
+}
+.side-menu .burgerList li a:before {
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:-1px;
+    left:0;
+    width:0;
+    height:0;
+    border-bottom:2.5px solid #ff8884;
+    transition:width 200ms ease-in-out;
+}
+.side-menu .burgerList li a:hover:before {
+    width:100%;
+}
+
+/* X 버튼 */
+.btn-close {
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    width:60px;
+    height:60px;
+    padding:15px;
+    cursor:pointer;
+    box-sizing:border-box;
+    transition:background-color 200ms ease-in-out;
+}
+/* X 버튼 - 마우스 오버 효과 */
+.btn-close:hover {
+    background-color:#ffbcba;
+}
+/* X 버튼 - 회전 */
+.btn-close span {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    transform:rotate(90deg);
+    transition:transform 200ms 180ms ease-in-out;
+}
+    /*
+        축약형
+        2개 축약
+        transition:속성(all, 스타일 속성) 속도(ms, s)    : - 가속도 linear
+        3개 축약
+        transition:속성 속도(ms, s) 가속도               : - 딜레이 0
+        4개 축약
+        transition:속성 속도(ms, s) 딜레이(ms, s) 가속도
+
+        multiple (2개 이상의 속성을 넣을 때)
+        transition:속성 속도(ms, s) 딜레이(ms, s) 가속도, 속성 속도(ms, s) 딜레이(ms, s) 가속도
+    */
+/* side menu 열었을 시 X 버튼 - 회전 */
+.side-menu.open .btn-close span {
+    transform:rotate(0deg);
+    transition:transform 200ms 180ms ease-in-out;
+}
+.btn-close span:before, .btn-close span:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:200%;
+    height:1px;
+    background-color:#222;
+    transition:background-color 200ms ease-in-out;
+}
+/* X 버튼 - 마우스 오버 효과 */
+.btn-close:hover span:before, .btn-close:hover span:after {
+    background-color:#fff;
+}
+/* X 버튼 모양 - 회전 위치 */
+.btn-close span:before {
+    transform:translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.btn-close span:after {
+    transform:translateX(-50%) translateY(-50%) rotate(135deg);
+}
+
+
+/* burgerMenu Footer */
+#burgerFooter {
+    margin-top:320px;
+    margin-left:40px;
+}
+#burgerFooter li {
+    display:inline;
+    padding:0 10px;
+    list-style-type:none;
+}
+/* burgerMenu Footer - sns icon */
+#burgerFooter li .fab {
+    color:#222;
+    font-size:25px;
+    opacity:0.8;
+}
+#burgerFooter li:first-child {
+    padding-left:0;
+}
+#burgerFooter li:nth-child(4) {
+    padding-right:0;
+}
+/* burgerMenu Footer - sns icon - 마우스 오버 효과 */
+#burgerFooter li:first-child .fab:hover {
+    color:#3b5998;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#burgerFooter li:nth-child(2) .fab:hover {
+    color:#cd486b;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#burgerFooter li:nth-child(3) .fab:hover {
+    color:#c8232c;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#burgerFooter li:nth-child(4) .fab:hover {
+    color:#86c9ef;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#burgerFooter li .fab:visited {
+    color:#e8c0be;
+}
+/* burgerMenu Footer - copyright */
+#burgerFooter li:last-child {
+    position:absolute;
+    left:30px;
+    color:#222;
+    font-family:'Quicksand', sans-serif;
+    font-size:9px;
+    margin-top:5px;
+}

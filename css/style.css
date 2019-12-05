@@ -1,147 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* Start */
 * {
     margin:0;
-    padding:0;
+    padding:0;          
 }
 
+/* body */
 body {
+    width:100%;
+    height:100%;
+    max-height:100%;
+}
+
+/* header */
+nav {
+    width:100%;
+    height:80px;
+}
+
+/* nav - logo */
+nav #nav .title {
+    color:#ffeded;
+    font-size:30px;
+    font-weight:bold;
+    font-family:'Pacifico', cursive;
+    line-height:110px;
+    letter-spacing:8px;
+    text-decoration:none;
+    padding-top:20px;
+    padding-left:80px;
+}
+/* nav - logo - 마우스 오버 효과 */
+nav #nav .title:hover {
+    color:#ffd0ce;
+    border-bottom:0;
+    transition:all 0.5s ease;
+}
+
+/* nav - menu */
+nav #nav ul {
     margin:0;
     padding:0;
-	font-family:'Prompt', sans-serif;
-	font-weight:700;
-    color:#4D4D4D;
-    background-color:#F6F6F6;
+    float:right;
 }
-
-a {
+nav #nav ul li {
+    list-style-type:none;
+    display:inline;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:18px;
+    line-height:110px;
+    padding:0 20px;
+}
+nav #nav ul li a {
     text-decoration:none;
+    color:#ffeded;
+    padding:0 20px 40px;
+}
+nav #nav ul li a.tasty {
+    margin-right:50px;
+}
+/* nav - menu - 마우스 오버 효과 */
+nav #nav ul li a:hover {
+    color:#ffd0ce;
+    padding-bottom:15px;
+    border-bottom:solid 5px #ffd0ce;
+    transition:all 0.3s ease;
 }
 
-
-/* Logo */
-.logo-text {
+/* nav - burger menu */
+nav #burgerMenu {
+    /* 기본 - 보이지 않게 함 */
     display:none;
 }
 
-
-/* Header */
-.header {
-    position:static;
-    padding:28px 52px;
-    z-index:9999;
-}      
-
-
-/* Menu */
-.menu {
-	position:absolute; 
-	z-index:999;
-	top:8px;
-	right:65px;
-	height:75px;
+/* nav - mediaquery */
+@media screen and (min-width:769px) and (max-width:1024px) {
+    /* nav - menu */
+    nav ul {
+        display:none;
+    }
+    
+    /* nav - burger Menu */
+    nav #burgerMenu {
+        display:block;
+        position:absolute;
+        top:0;
+        right:0;
+        height:100vh;
+    }
+    nav #burgerMenu ul {
+        display:block;
+    }
+}
+@media screen and (min-width:361px) and (max-width:768px) {
+    /* nav - menu */
+    nav ul {
+        display:none;
+    }
+    
+    /* nav - logo */
+    nav #nav .title {
+        padding-left:60px;
+    }
+    
+    /* nav - burger Menu */
+    nav #burgerMenu {
+        display:block;
+        position:absolute;
+        top:0;
+        right:0;
+        height:100vh;
+    }
+    nav #burgerMenu ul {
+        display:block;
+    }
+}
+@media screen and (max-width:360px) {
+    /* nav - menu */
+    nav ul {
+        display:none;
+    }
+    
+    /* nav - logo */
+    nav #nav .title {
+        font-size:20px;
+        padding-left:25px;
+    }
+    
+    /* nav - burger Menu */
+    nav #burgerMenu {
+        display:block;
+        position:absolute;
+        top:0;
+        right:-5%;
+        height:100vh;
+    }
+    nav #burgerMenu ul {
+        display:block;
+    }
 }
 
-.menu .menu-list { 
-	float:left;
-	position:relative;
-	top:50%;
-    transform:translateY(-50%);
+/* nav - dropdown menu */
+nav #nav ul li ul li {
+    display:none;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    background-color:#ffbcba;
+    transition:all 0.8s ease, color 0.3s 0.3s;  
+    cursor:pointer;  
 }
-
-.menu .menu-list ul li {
-	display:inline-block;
-	margin-right:40px;
-    cursor:pointer;
+/* nav - dropdown menu - 마우스 오버 효과 */
+nav #nav ul li ul li:hover {
+    background-color:#ff7875;
+    box-shadow:0 50px 0 0 rgba(0,0,0,0.15) inset, 
+			   0 -50px 0 0 rgba(0,0,0,0.15) inset;
 }
-
-.menu .menu-list ul li:last-child {
-    margin-right:45px;
-}
-
-.menu .menu-list .active a:after {
-    border-bottom:0.25em solid rgba(242, 106, 11, 0.4);
-    content:"";
-    margin-top:calc(0.25em / 2 * -1);
+nav #nav ul li ul.dropmenu1 {
     position:absolute;
-    top:50%;
-    right:0;
-    left:-6.5%;
-    width:110%;
+    right:497px;
 }
-
-.menu .menu-list ul li a {
-    position:relative;
-    text-decoration:none;
-	color:#4D4D4D;
-    font-size:16px;
-    letter-spacing:2px;
-}
-
-.menu .menu-list ul li a:hover:after {
-    border-bottom:0.25em solid rgba(242, 106, 11, 0.4);
-    content:"";
-    margin-top:calc(0.25em / 2 * -1);
+nav #nav ul li ul.dropmenu2 {
     position:absolute;
-    top:50%;
-    right:0;
-    left:-6.5%;
-    width:110%;
+    right:362px;
 }
-
-.menu .burger-menu { 
-	float:right;
-	position:relative;
-	top:50%;
-	transform:translateY(-50%);
-	width:25px;
-	height:25px;
-	cursor:pointer;
+nav #nav ul li ul.dropmenu3 {
+    position:absolute;
+    right:66px;
 }
-
-.menu .burger-menu .menu-icon {
-	cursor:pointer;
-	margin:0 auto;
-	padding-left:1.25em;
-	position:relative;
-	width:12px;
-	height:10px;
-  }
-
-.menu-global {
-	backface-visibility:hidden;
-	position:absolute;
-	left:0;
-	border-top:4px solid #4D4D4D;
-	width:100%;
-	transition:0.55s;
+nav #nav ul li:hover li {
+    display:block;
 }
-
-.menu-top {
-	top:0;
+nav #nav ul li ul li a {
+    color:white;
+    font-size:15px;
+    margin:0;
+    padding:0;
 }
-
-.menu-middle {
-	top:9px;
-}
-
-.menu-bottom {
-	top:18px;
-}
-
-.menu-top-click {
-	backface-visibility:hidden;
-	top:10px;
-	transform:rotate(50deg);
-	transition:0.55s 0.5s;
-}
-
-.menu-middle-click {
-	opacity:0;
-}
-  
-.menu-bottom-click {
-	backface-visibility:hidden;
-	top:10px;
-	transform:rotate(-410deg);
-	transition:0.55s 0.5s;
+/* nav - dropdown menu - 메뉴 제목 마우스 오버 효과 */
+nav #nav ul li ul li a:hover {
+    color:white;
+    border-bottom:0;
+    padding:0;
 }

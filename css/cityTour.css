@@ -1,0 +1,581 @@
+/* body */
+body {
+    /* burgerMenu 때문에 벗어난 영역을 숨김 */
+    overflow-x:hidden;
+}
+
+
+/* header */
+nav {
+    /* 네비게이션이 맨 위로 올 수 있도록 함 */
+    position:absolute;
+    z-index:9999;
+}
+
+
+/* content */
+#content {
+    position:relative;
+    min-height:794px;
+}
+
+/* city tour first title - background-image 삽입 */
+#content .cityTour {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    background:url('../images/cityTour.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+    background-attachment:fixed;
+}
+
+/* city tour first title text */
+#content .cityTour .subject1 {
+    color:#ffe0e0;
+    opacity:0.8;
+    font-size:80px;
+    font-family:'Palanquin Dark', sans-serif;
+    letter-spacing:5px;
+    margin-top:360px;
+    text-align:center;
+}
+
+
+/* contatiner - 콘텐츠 영역 전체 */
+#container {
+    position:relative;
+    left:50%;
+    transform:translate(-50%, -50%);
+    margin-top:280px;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+}
+
+/* contatiner - mediaquery (기존 스타일을 Desktop 우선으로 작성했으므로 다른 크기의 화면에서 사용될 스타일 작성) */
+@media screen and (max-width:768px) {
+    #container {
+        margin-top:200px;
+    }
+}
+       
+
+/* city tour second title */
+#wrapper1 {
+    position:relative;
+    width:1000px;
+    margin:0 auto;
+}
+
+/* city tour second title - 메인 주제 */
+#wrapper1 .mainSub {
+    position:absolute;
+    left:100px;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:40px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    line-height:150%;
+}
+#wrapper1 .mainSub span {
+    padding-left:60px;
+}
+#wrapper1 .mainSub:after {
+    position:absolute;
+    top:0;
+    left:400px;
+    content:'';
+    border-right:1px solid black;
+    padding-bottom:400px;
+}
+
+/* city tour second title - 메인 주제 설명 */
+#wrapper1 .mainEx {
+    position:absolute;
+    top:10px;
+    right:90px;
+    width:280px;
+    text-align:justify;
+    font-size:13px;
+    line-height:22px;
+    letter-spacing:1.5px;
+}
+
+/* city tour second title - 이미지 */
+#wrapper1 img {
+    position:absolute;
+    right:370px;
+    z-index:-9999;
+    width:620px;
+    height:350px;
+    margin-top:220px;
+}
+
+/* art tour second title - 주제 간략하게 설명 */
+#wrapper1 .subEx {
+    position:absolute;
+    left:360px;
+    z-index:-9998;
+    width:640px;
+    height:355px;
+    background-color:#ffe6da;
+    margin-top:260px;
+}
+#wrapper1 .subEx p {
+    text-align:left;
+    font-size:16px;
+    line-height:25px;
+    margin-top:160px;
+    margin-left:220px;
+}
+#wrapper1 .subEx p span {
+    font-weight:bold;
+}
+
+/* city tour second title - mediaquery */
+@media screen and (max-width:768px) {
+    /* city tour second title */
+    #wrapper1 {
+        width:80%;
+        margin:0 auto;
+    }
+    
+    /* city tour second title - 메인 주제 */
+    #wrapper1 .mainSub {
+        left:55px;
+        font-size:30px;
+    }
+    #wrapper1 .mainSub span {
+        padding-left:35px;
+    }
+    #wrapper1 .mainSub:after {
+        left:260px;
+        padding-bottom:350px;
+    }
+    
+    /* city tour second title - 메인 주제 설명 */
+    #wrapper1 .mainEx {
+        top:5px;
+        right:15px;
+        width:200px;
+        font-size:10px;
+    }
+    
+    /* city tour second title - 이미지 */
+    #wrapper1 img {
+        right:180px;
+        width:420px;
+        height:237px;
+    }
+    
+    /* art tour second title - 주제 간략하게 설명 */
+    #wrapper1 .subEx {
+        left:200px;
+        width:420px;
+        height:237px;
+        margin-top:260px;
+    }
+    #wrapper1 .subEx p {
+        font-size:12px;
+        margin-top:100px;
+        margin-left:150px;
+    }
+}
+
+
+/* city tour content _ wrapper2 - 콘텐츠 영역 전체 */
+#wrapper2 {
+    position:relative;
+    width:1000px;
+    margin:0 auto;
+}
+
+/* city tour content line */
+#wrapper2 #line {
+    position:absolute;
+    top:750px;
+    left:0;
+    width:500px;
+    height:2200px;
+    border-right:1px solid black;
+    margin-top:40px;
+}
+
+/* city tour content box */
+#wrapper2 #content1 {
+    position:absolute;
+    left:10px;
+    margin-top:900px;
+}
+#wrapper2 #content2 {
+    position:absolute;
+    left:10px;
+    margin-top:1650px;
+}
+#wrapper2 #content3 {
+    position:absolute;
+    left:10px;
+    margin-top:2400px;
+}
+#wrapper2 #content4 {
+    position:absolute;
+    right:10px;
+    margin-top:1200px;
+}
+#wrapper2 #content5 {
+    position:absolute;
+    right:10px;
+    margin-top:1950px;
+}
+#wrapper2 #content6 {
+    position:absolute;
+    right:10px;
+    margin-top:2700px;
+}
+
+/* city tour content title */
+#wrapper2 #content1 .conTitle,
+#wrapper2 #content2 .conTitle,
+#wrapper2 #content3 .conTitle {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    width:250px;
+    margin-left:220px;
+    margin-bottom:60px;
+}
+#wrapper2 #content4 .conTitle,
+#wrapper2 #content5 .conTitle,
+#wrapper2 #content6 .conTitle {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:22px;
+    margin-left:-105px;
+    margin-bottom:60px;
+}
+
+/* city tour content title - circle */
+#wrapper2 #content1 .conTitle:after, 
+#wrapper2 #content2 .conTitle:after,
+#wrapper2 #content3 .conTitle:after {
+    content:'';
+    position:absolute;
+    top:2px;
+    left:482px;
+    width:15px;
+    height:15px;
+    border:1px solid black;
+    background-color:black;
+    border-radius:100px;
+}
+#wrapper2 #content4 .conTitle:after,
+#wrapper2 #content5 .conTitle:after,
+#wrapper2 #content6 .conTitle:after {
+    content:'';
+    position:absolute;
+    top:2px;
+    right:481px;
+    width:15px;
+    height:15px;
+    border:1px solid black;
+    background-color:black;
+    border-radius:100px;
+}
+
+/* city tour content card */
+#wrapper2 #content1 .conBox1,
+#wrapper2 #content2 .conBox2,
+#wrapper2 #content3 .conBox3 {
+    width:350px;
+    height:450px;
+    background-color:white;
+    box-sizing:border-box;
+    box-shadow:1px 1px 3px #ccc;
+}
+#wrapper2 #content4 .conBox4,
+#wrapper2 #content5 .conBox5,
+#wrapper2 #content6 .conBox6 {
+    width:350px;
+    height:450px;
+    background-color:white;
+    box-sizing:border-box;
+    box-shadow:1px 1px 3px #ccc;
+}
+
+/* city tour content card - 이미지 */
+#wrapper2 #content1 .conBox1 img,
+#wrapper2 #content2 .conBox2 img,
+#wrapper2 #content3 img {
+    width:350px;
+    height:220px;
+}
+#wrapper2 #content4 .conBox4 img,
+#wrapper2 #content5 .conBox5 img,
+#wrapper2 #content6 .conBox6 img {
+    width:350px;
+    height:220px;
+}
+
+/* city tour content card - 제목 */
+#wrapper2 #content1 .conBox1 .conBox1Title,
+#wrapper2 #content2 .conBox2 .conBox2Title,
+#wrapper2 #content3 .conBox3 .conBox3Title {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:18px;
+    margin-top:40px;
+    margin-left:35px;
+}
+#wrapper2 #content4 .conBox4 .conBox4Title,
+#wrapper2 #content5 .conBox5 .conBox5Title,
+#wrapper2 #content6 .conBox6 .conBox6Title {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:18px;
+    margin-top:40px;
+    margin-left:35px;
+}
+
+/* city tour content card - 제목 밑에 직선 */
+#wrapper2 #content1 .conBox1 .conBox1Title:after,
+#wrapper2 #content2 .conBox2 .conBox2Title:after,
+#wrapper2 #content3 .conBox3 .conBox3Title:after {
+    content:'';
+    position:absolute;
+    top:380px;
+    left:35px;
+    border-bottom:2px solid #2d2d2d;
+    padding-right:50px;
+}
+#wrapper2 #content4 .conBox4 .conBox4Title:after,
+#wrapper2 #content5 .conBox5 .conBox5Title:after,
+#wrapper2 #content6 .conBox6 .conBox6Title:after {
+    content:'';
+    position:absolute;
+    top:380px;
+    left:35px;
+    border-bottom:2px solid #2d2d2d;
+    padding-right:50px;
+}
+
+/* city tour content card - 메인 설명 */
+#wrapper2 #content1 .conBox1 .conBox1Ex,
+#wrapper2 #content2 .conBox2 .conBox2Ex,
+#wrapper2 #content3 .conBox3 .conBox3Ex {
+    font-size:11px;
+    line-height:20px;
+    text-align:justify;
+    width:280px;
+    margin-top:40px;
+    margin-left:35px;
+}
+#wrapper2 #content4 .conBox4 .conBox4Ex,
+#wrapper2 #content5 .conBox5 .conBox5Ex,
+#wrapper2 #content6 .conBox6 .conBox6Ex {
+    font-size:11px;
+    line-height:20px;
+    text-align:justify;
+    width:280px;
+    margin-top:40px;
+    margin-left:35px;
+}
+
+/* city tour content card - 부가 설명 */
+#wrapper2 #content1 .conBox1 .conBox1SubEx,
+#wrapper2 #content2 .conBox2 .conBox2SubEx,
+#wrapper2 #content3 .conBox3 .conBox3SubEx {
+    color:#afafaf;
+    font-size:10px;
+    margin-top:20px;
+    margin-left:35px;
+}
+#wrapper2 #content4 .conBox4 .conBox4SubEx,
+#wrapper2 #content5 .conBox5 .conBox5SubEx,
+#wrapper2 #content6 .conBox6 .conBox6SubEx {
+    color:#afafaf;
+    font-size:10px;
+    margin-top:20px;
+    margin-left:35px;
+}
+
+/* city tour content - mediaquery */
+@media screen and (max-width:768px) {
+    /* city tour content _ wrapper2 - 콘텐츠 영역 전체 */
+    #wrapper2 {
+        width:80%;
+        margin:0 auto;
+    }
+    
+    /* city tour content line */
+    #wrapper2 #line {
+        position:absolute;
+        left:-190px;
+        width:500px;
+        height:2200px;
+        margin-top:40px;
+    }
+    
+    /* city tour content box */
+    #wrapper2 #content1 {
+        position:absolute;
+        left:10px;
+        margin-top:900px;
+    }
+    #wrapper2 #content2 {
+        position:absolute;
+        left:10px;
+        margin-top:1650px;
+    }
+    #wrapper2 #content3 {
+        position:absolute;
+        left:10px;
+        margin-top:2400px;
+    }
+    #wrapper2 #content4 {
+        position:absolute;
+        left:360px;
+        margin-top:1200px;
+    }
+    #wrapper2 #content5 {
+        position:absolute;
+        left:360px;
+        margin-top:1950px;
+    }
+    #wrapper2 #content6 {
+        position:absolute;
+        left:360px;
+        margin-top:2700px;
+    }
+    
+    /* city tour content title */
+    #wrapper2 #content1 .conTitle,
+    #wrapper2 #content2 .conTitle,
+    #wrapper2 #content3 .conTitle {
+        font-size:18px;
+        margin-left:100px;
+    }
+    #wrapper2 #content4 .conTitle,
+    #wrapper2 #content5 .conTitle,
+    #wrapper2 #content6 .conTitle {
+        font-size:18px;
+        margin-left:-10px;
+    }
+    
+    /* city tour content title - circle */
+    #wrapper2 #content1 .conTitle:after, 
+    #wrapper2 #content2 .conTitle:after,
+    #wrapper2 #content3 .conTitle:after {
+        top:2px;
+        left:292px;
+    }
+    #wrapper2 #content4 .conTitle:after,
+    #wrapper2 #content5 .conTitle:after,
+    #wrapper2 #content6 .conTitle:after {
+        top:2px;
+        left:-58px;
+    }
+    
+    /* city tour content card */
+    #wrapper2 #content1 .conBox1,
+    #wrapper2 #content2 .conBox2,
+    #wrapper2 #content3 .conBox3 {
+        width:250px;
+        height:350px;
+    }
+    #wrapper2 #content4 .conBox4,
+    #wrapper2 #content5 .conBox5,
+    #wrapper2 #content6 .conBox6 {
+        width:250px;
+        height:350px;
+    }
+    
+    /* city tour content card - 이미지 */
+    #wrapper2 #content1 .conBox1 img,
+    #wrapper2 #content2 .conBox2 img,
+    #wrapper2 #content3 img {
+        width:250px;
+        height:150px;
+    }
+    #wrapper2 #content4 .conBox4 img,
+    #wrapper2 #content5 .conBox5 img,
+    #wrapper2 #content6 .conBox6 img {
+        width:250px;
+        height:150px;
+    }
+    
+    /* city tour content card - 제목 */
+    #wrapper2 #content1 .conBox1 .conBox1Title,
+    #wrapper2 #content2 .conBox2 .conBox2Title,
+    #wrapper2 #content3 .conBox3 .conBox3Title {
+        font-size:16px;
+        margin-top:30px;
+        margin-left:25px;
+    }
+    #wrapper2 #content4 .conBox4 .conBox4Title,
+    #wrapper2 #content5 .conBox5 .conBox5Title,
+    #wrapper2 #content6 .conBox6 .conBox6Title {
+        font-size:16px;
+        margin-top:30px;
+        margin-left:25px;
+    }
+    
+    /* city tour content card - 제목 밑에 직선 */
+    #wrapper2 #content1 .conBox1 .conBox1Title:after,
+    #wrapper2 #content2 .conBox2 .conBox2Title:after,
+    #wrapper2 #content3 .conBox3 .conBox3Title:after {
+        top:290px;
+        left:25px;
+        border-bottom:2px solid #2d2d2d;
+        padding-right:30px;
+    }
+    #wrapper2 #content4 .conBox4 .conBox4Title:after,
+    #wrapper2 #content5 .conBox5 .conBox5Title:after,
+    #wrapper2 #content6 .conBox6 .conBox6Title:after {
+        top:290px;
+        left:25px;
+        border-bottom:2px solid #2d2d2d;
+        padding-right:30px;
+    }
+    
+    /* city tour content card - 메인 설명 */
+    #wrapper2 #content1 .conBox1 .conBox1Ex,
+    #wrapper2 #content2 .conBox2 .conBox2Ex,
+    #wrapper2 #content3 .conBox3 .conBox3Ex {
+        font-size:10px;
+        width:180px;
+        margin-top:30px;
+        margin-left:25px;
+    }
+    #wrapper2 #content4 .conBox4 .conBox4Ex,
+    #wrapper2 #content5 .conBox5 .conBox5Ex,
+    #wrapper2 #content6 .conBox6 .conBox6Ex {
+        font-size:10px;
+        width:180px;
+        margin-top:30px;
+        margin-left:25px;
+    }
+    
+    /* city tour content card - 부가 설명 */
+    #wrapper2 #content1 .conBox1 .conBox1SubEx,
+    #wrapper2 #content2 .conBox2 .conBox2SubEx,
+    #wrapper2 #content3 .conBox3 .conBox3SubEx {
+        display:none;
+    }
+    #wrapper2 #content4 .conBox4 .conBox4SubEx,
+    #wrapper2 #content5 .conBox5 .conBox5SubEx,
+    #wrapper2 #content6 .conBox6 .conBox6SubEx {
+        display:none;
+    }
+}
+
+
+/* footer */
+footer {
+    position:relative;
+    margin-top:3800px;
+}
+
+/* footer - mediaquery */
+@media screen and (max-width:768px) {
+    footer {
+        margin-top:3600px;
+    }
+}

@@ -1,0 +1,98 @@
+/* footer */
+footer {
+    z-index:1;
+    height:280px;
+    background-color:#ffc3c1;
+    text-align:center;
+}
+
+/* footer - sns icon */
+#sns {
+    padding-top:50px;
+}
+#sns li {
+    display:inline;
+    padding:0 18px;
+    list-style-type:none;
+}
+#sns li .fab {
+    color:#ff9c99;
+    font-size:30px;
+    opacity:0.8;
+}
+/* footer - sns icon - 마우스 오버 효과 */
+#sns li:first-child .fab:hover {
+    color:#3b5998;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#sns li:nth-child(2) .fab:hover {
+    color:#cd486b;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#sns li:nth-child(3) .fab:hover {
+    color:#c8232c;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#sns li:last-child .fab:hover {
+    color:#86c9ef;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#sns li .fab:visited {
+    color:#e8c0be;
+}
+
+/* footer - logo */
+#logo {
+    padding-top:48px;
+}        
+#logo dt {
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    font-family:'Pacifico', cursive;
+    letter-spacing:8px;
+    padding-bottom:28px;
+}
+#logo dd {
+    color:#ffe6e5;
+    font-family:'Quicksand', sans-serif;
+    font-size:10px;
+    padding-bottom:10px;
+}
+
+/* footer - etc explain */
+#etc li {
+    list-style-type:none;
+    display:inline;
+    color:#ffe6e5;
+    font-size:10px;
+    padding:0 2px;
+}
+#etc li:after {
+    content:'|';
+    padding-left:10px;
+}
+#etc .li_4:after {
+    content:none;
+}
+
+@media screen and (max-width:360px) {
+    /* footer - sns icon */
+    #sns li .fab {
+        font-size:18px;
+    }
+    
+    /* footer - logo */
+    #logo dt {
+        font-size:18px;
+    }
+    
+    /* footer - etc explain */
+    #etc li {
+        font-size:9px;
+    }
+}

@@ -1,0 +1,587 @@
+/* body */
+body {
+    /* burgerMenu 때문에 벗어난 영역을 숨김 */
+    overflow-x:hidden;
+}
+
+
+/* header */
+nav {
+    /* 네비게이션이 맨 위로 올 수 있도록 함 */
+    position:absolute;
+    z-index:9999;
+}
+
+
+/* content */
+#content {
+    position:relative;
+    min-height:794px;
+}
+
+/* movie first title - background-image 삽입 */
+#content .movie {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    background:url('../images/movie.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+    background-attachment:fixed;
+}
+
+/* movie first title text */
+#content .movie .subject1 {
+    color:#ffe0e0;
+    opacity:0.8;
+    font-size:80px;
+    font-family:'Palanquin Dark', sans-serif;
+    letter-spacing:5px;
+    margin-top:360px;
+    text-align:center;
+}
+
+
+/* contatiner - 콘텐츠 영역 전체 */
+#container {
+    position:relative;
+    margin-top:200px;
+}
+
+/* contatiner - mediaquery (기존 스타일을 Desktop 우선으로 작성했으므로 다른 크기의 화면에서 사용될 스타일 작성) */
+@media screen and (max-width:768px) {
+    #container {
+        margin-top:120px;
+    }
+}
+ 
+
+/* movie second title - 영역 전체 */
+#wrapper1 {
+    position:relative;
+    width:1000px;
+    margin:0 auto;
+}
+
+/* movie second title - 글 영역 */
+#title {
+    border:solid 3px black;
+    width:400px;
+    height:600px;
+    display:inline-block;
+    margin:120px 0 200px 50px;
+    padding-top:30px;
+    position:relative;
+    z-index:2;
+}
+
+/* movie second title - 제목 */
+#title .subject {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:45px;
+    font-weight:bold;
+    color:#2d2d2d;
+    line-height:150%;
+    padding-top:17px;
+    padding-left:60px;
+}
+
+/* movie second title - 제목 중 강조 */
+#title .subject span {
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:15px;
+    font-weight:normal;
+    color:white;
+    background-color:#ffc3c1;
+    padding:0 6px 0;
+}
+
+/* movie second title - 구분선 */
+#title hr {
+    width:20px;
+    height:3px;
+    border:0;
+    background-color:black;
+    margin:50px 0 0 60px;
+}
+
+/* movie second title - 설명 */
+#title .explain {
+    font-family:'Gothic A1', sans-serif;
+    font-size:11px;
+    color:#2d2d2d;
+    line-height:20px;
+    padding:60px 0 70px 60px;
+}
+
+/* movie second title - 설명 중 강조 */
+#title .explain span {
+    color:#2d2d2d;
+    font-weight:bold;
+}
+
+/* movie second title - 이미지 */
+#title_image img {
+    position:absolute;
+    top:50px;
+    left:410px;
+    z-index:1;
+}
+#title_image .img2 {
+    opacity:0;
+    transition:opacity 1s;
+}
+#title_image:hover .img2 {
+    opacity:1;
+}
+
+/* movie second title - mediaquery */
+@media screen and (max-width:768px) {
+    /* movie second title - 영역 전체 */
+    #wrapper1 {
+        width:80%;
+        margin:0 auto;
+    }
+    
+    /* movie second title - 글 영역 */
+    #title {
+        width:300px;
+        margin:120px 0 200px 0;
+    }
+    
+    /* movie second title - 제목 */
+    #title .subject {
+        padding-left:50px;
+    }
+    
+    /* movie second title - 구분선 */
+    #title hr {
+        margin:40px 0 0 50px;
+    }
+    
+    /* movie second title - 설명 */
+    #title .explain {
+        width:180px;
+        font-size:10px;
+        padding:40px 0 70px 50px;
+    }
+    
+    /* movie second title - 이미지 */
+    #title_image img {
+        top:105px;
+        left:260px;
+        width:350px;
+        height:665px;
+    }
+}
+         
+
+/* movie place content _wrapper2 - 콘텐츠 영역 전체 */
+#wrapper2 {
+    position:relative;
+    width:1000px;
+    margin:10px auto 0;
+}
+
+/* movie place content - 제목 */
+#wrapper2 .subtitle1 {
+    color:#2d2d2d;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:35px;
+    margin-top:80px;
+    margin-left:50px;
+}
+#wrapper2 .subtitle2 {
+    color:#2d2d2d;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:35px;
+    margin:50px 0 0 405px;
+}
+#wrapper2 .subtitle3 {
+    color:#2d2d2d;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:35px;
+    margin:500px 0 0 725px;
+}
+
+/* movie place content */
+#content1 {
+    position:relative;
+    padding:70px 0 50px 50px;
+}
+#content2 {
+    padding:70px 50px 150px 0px;
+    width:980px;
+}
+#content3 {
+    position:relative;
+    padding:70px 0 50px 50px;
+}
+#content4 {
+    position:relative;
+    padding:70px 50px 150px 0px;
+    width:980px;
+}
+
+/* movie place content - 이미지 */
+#content1 .mainImg {
+    width:600px;
+}
+#content1 .subImg {
+    width:340px;
+    height:200px;
+    position:absolute;
+    top:290px;
+    left:410px;
+}
+#content2 img {
+    float:right;
+    width:400px;
+    height:350px;
+}
+#content3 img {
+    float:left;
+    width:400px;
+    height:350px;
+}
+#content4 img {
+    float:right;
+}
+#content4 .mainImg {
+    width:600px;
+}
+#content4 .subImg {
+    width:340px;
+    height:200px;
+    position:absolute;
+    top:290px;
+    right:380px;
+}
+
+/* movie place content - 정보 영역 */
+#content1 .infoSub1 {
+    text-align:left;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+    line-height:22px;
+    letter-spacing:1.5px;
+    width:280px;
+}
+#content2 .infoSub2 {
+    margin-left:200px;
+    text-align:left;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+    line-height:22px;
+    letter-spacing:1.5px;
+    width:280px;
+}
+#content3 .infoSub3 {
+    float:left;
+    margin-left:100px;
+    text-align:left;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+    line-height:22px;
+    letter-spacing:1.5px;
+    width:280px;
+}
+#content4 .infoSub4 {
+    width:280px;
+    margin-top:390px;
+    margin-left:700px;
+    text-align:left;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+    line-height:22px;
+    letter-spacing:1.5px;
+}
+
+/* movie place content - 정보 제목 */
+#content1 h3 {
+    color:#2d2d2d;
+    font-size:19px;
+    font-weight:bold;
+    line-height:32px;
+    margin-top:50px;
+    margin-bottom:30px;
+}
+#content2 h3 {
+    text-align:right;
+    color:#2d2d2d;
+    font-size:19px;
+    font-weight:bold;
+    line-height:32px;
+    margin-top:60px;
+    margin-bottom:30px;
+}
+#content3 h3 {
+    text-align:left;
+    color:#2d2d2d;
+    font-size:19px;
+    font-weight:bold;
+    line-height:32px;
+    margin-top:60px;
+    margin-bottom:30px;
+}
+#content4 h3 {
+    color:#2d2d2d;
+    font-size:19px;
+    font-weight:bold;
+    line-height:32px;
+    margin-top:50px;
+    margin-bottom:30px;
+}
+
+/* movie place content - 정보 설명 */
+#content1 .infoEx1 {
+    color:#2d2d2d;
+    font-size:13px;
+    padding-top:5px;
+    text-align:justify;
+}
+#content2 .infoEx2 {
+    color:#2d2d2d;
+    font-size:13px;
+    padding-top:5px;
+    text-align:justify;
+}
+#content3 .infoEx3 {
+    color:#2d2d2d;
+    font-size:13px;
+    padding-top:5px;
+    text-align:justify;
+}
+#content4 .infoEx4 {
+    color:#2d2d2d;
+    font-size:13px;
+    padding-top:5px;
+    text-align:justify;
+}
+
+/* movie place content - mediaquery */
+@media screen and (max-width:768px) {
+    /* movie place content _wrapper2 - 콘텐츠 영역 전체 */
+    #wrapper2 {
+        width:80%;
+        margin:10px auto 0;
+    }
+    
+    /* movie place content - 제목 */
+    #wrapper2 .subtitle1 {
+        font-size:30px;
+        margin-left:0px;
+    }
+    #wrapper2 .subtitle2 {
+        font-size:30px;
+        margin:150px 0 0 95px;
+    }
+    #wrapper2 .subtitle3 {
+        font-size:30px;
+        margin:450px 0 0 370px;
+    }
+    
+    /* movie place content */
+    #content1 {
+        position:relative;
+        padding:70px 0 50px 0px;
+    }
+    #content2 {
+        padding:70px 0px 150px 0px;
+        width:600px;
+    }
+    #content3 {
+        position:relative;
+        padding:70px 0 50px 0;
+    }
+    #content4 {
+        position:relative;
+        padding:70px 50px 150px 0px;
+        width:600px;
+    }
+    
+    /* movie place content - 이미지 */
+    #content1 .mainImg {
+        width:500px;
+    }
+    #content1 .subImg {
+        width:280px;
+        height:180px;
+        position:absolute;
+        top:290px;
+        left:320px;
+    }
+    #content2 img {
+        float:right;
+        width:270px;
+        height:250px;
+    }
+    #content3 img {
+        float:left;
+        width:270px;
+        height:250px;
+    }
+    #content4 img {
+        float:right;
+    }
+    #content4 .mainImg {
+        width:500px;
+    }
+    #content4 .subImg {
+        width:280px;
+        height:180px;
+        position:absolute;
+        top:290px;
+        right:380px;
+    }
+    
+    /* movie place content - 정보 영역 */
+    #content2 .infoSub2 {
+        margin-left:0px;
+        width:280px;
+    }
+    #content3 .infoSub3 {
+        float:left;
+        margin-left:50px;
+        width:280px;
+    }
+    #content4 .infoSub4 {
+        width:280px;
+        margin-top:390px;
+        margin-left:320px;
+    }
+    
+    /* movie place content - 정보 제목 */
+    #content1 h3 {
+        font-size:15px;
+    }
+    #content2 h3 {
+        font-size:15px;
+        margin-top:20px;
+    }
+    #content3 h3 {
+        font-size:15px;
+        margin-top:20px;
+    }
+    #content4 h3 {
+        font-size:15px;
+        margin-top:50px;
+        margin-bottom:30px;
+    }
+    
+    /* movie place content - 정보 설명 */
+    #content1 .infoEx1 {
+        font-size:10px;
+    }
+    #content2 .infoEx2 {
+        font-size:10px;
+    }
+    #content3 .infoEx3 {
+        font-size:10px;
+    }
+    #content4 .infoEx4 {
+        font-size:10px;
+    }
+}
+ 
+
+/* movie place special point content */
+#wrapper3 {
+    position:relative;
+    width:1000px;
+    margin:0 auto 80px;
+}
+
+/* movie place special point content - 제목 */
+#wrapper3 .subtitle {
+    color:#2d2d2d;
+    font-family:'Palanquin Dark', sans-serif;
+    font-size:35px;
+    margin-top:50px;
+    margin-left:50px;
+}
+
+/* movie place special point content - 정보 영역 */
+#content6 {
+    padding:70px 0 50px 0px;
+    width:980px;
+}
+
+/* movie place special point content - 이미지 */
+#content6 img {
+    float:right;
+    position:absolute;
+}
+#content6 img:hover {
+    filter:grayscale(100%);
+    transition:all 1s ease;
+}
+#content6_image1 img {
+    left:355px;
+}
+#content6_image2 img {
+    left:680px;
+}
+
+/* movie place special point content - 설명 */
+#content6 .infoEx5 {
+    width:195px;
+    margin-left:50px;
+    padding-top:5px;
+    text-align:left;
+    font-family:'Gothic A1', sans-serif;
+    color:#2d2d2d;
+    font-size:13px;
+    text-align:justify;
+    line-height:22px;
+    letter-spacing:1.5px;
+}
+
+/* movie place special point content - 설명 중 강조 */
+#content6 .infoEx5 span {
+    font-weight:bold;
+}
+
+/* movie place special point content - mediaquery */
+@media screen and (max-width:768px) {
+    /* movie place special point content */
+    #wrapper3 {
+        width:80%;
+        margin:0 auto 80px;
+    }
+    
+    /* movie place special point content - 제목 */
+    #wrapper3 .subtitle {
+        font-size:30px;
+        margin-top:50px;
+        margin-left:0;
+    }
+    
+    /* movie place special point content - 정보 영역 */
+    #content6 {
+        padding:70px 0 50px 0;
+        width:980px;
+    }
+    
+    /* movie place special point content - 이미지 */
+    #content6_image1 img {
+        left:305px;
+    }
+    #content6_image2 img {
+        display:none;
+    }
+    
+    /* movie place special point content - 설명 */
+    #content6 .infoEx5 {
+        margin-left:0;
+        padding-top:20px;
+        font-size:10px;
+    }
+}
+
+
+/* footer */
+footer {
+    margin-top:250px;
+}

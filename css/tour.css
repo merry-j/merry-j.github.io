@@ -1,0 +1,325 @@
+/* body */
+body {
+    /* burgerMenu 때문에 벗어난 영역을 숨김 */
+    overflow-x:hidden;
+    font-family:'Nanum Gothic', sans-serif;
+}
+
+
+/* header */
+nav {
+    /* 네비게이션이 맨 위로 올 수 있도록 함 */
+    position:absolute;
+    z-index:9999;
+}
+
+
+/* content */
+#content {
+    position:relative;
+    min-height:758px;
+}
+
+/* tour title - background-image 삽입 */
+#content .tour {
+    width:50%;
+    height:100%;
+    position:absolute;
+    z-index:-9999;
+    background:url('../images/tour.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+}
+
+/* tour title - 제목 */
+#content .tour .subject1 {
+    color:#ffe0e0;
+    opacity:0.7;
+    font-size:80px;
+    font-family:'Palanquin Dark', sans-serif;
+    letter-spacing:5px;
+    margin-top:270px;
+    margin-left:80px;
+}
+
+/* tour title - 제목 밑에 직선 */
+#content .tour .subject1:after {
+    content:'';
+    display:block;
+    width:110px;
+    border-bottom:8px solid #ffe0e0;
+    padding-top:30px;
+}
+
+/* tour title - 설명 */
+#content .tour .message {
+    font-size:13px;
+    color:#ffeded;
+    line-height:22px;
+    margin-top:30px;
+    margin-left:80px;
+}
+
+/* art tour title - background-image 삽입 */
+#content .artTour {
+    width:50%;
+    height:50%;
+    position:absolute;
+    right:0px;
+    z-index:2;
+    background-color:black;
+    background:url('../images/artTour.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+}
+
+/* art tour title - 제목 */
+#content .artTour .subject2 {
+    display:block;
+    color:#ffe0e0;
+    opacity:0.7;
+    font-size:50px;
+    font-family:'Palanquin Dark', sans-serif;
+    text-decoration:none;
+    letter-spacing:5px;
+    margin-top:240px;
+    margin-left:75px;
+}
+
+/* art tour title - 제목 밑에 직선 */
+#content .artTour .subject2:after {
+    content:'';
+    display:block;
+    width:115px;
+    border-bottom:8px solid #ffe0e0;
+    padding-top:20px;
+}
+/* art tour title - 마우스 오버 효과 */
+#content .artTour .subject2:hover {
+    color:#ff8784;
+    transition:all 0.8s ease;
+}
+
+/* city tour title - background-image 삽입 */
+#content .cityTour {
+    width:50%;
+    height:50%;
+    position:absolute;
+    top:379px;
+    right:0px;
+    z-index:3;
+    background:url('../images/cityTour.jpg') no-repeat;
+    background-size:cover;
+    background-position:left top;
+}
+
+/* city tour title - 제목 */
+#content .cityTour .subject3 {
+    display:block;
+    color:#ffe0e0;
+    opacity:0.7;
+    font-size:50px;
+    font-family:'Palanquin Dark', sans-serif;
+    text-decoration:none;
+    letter-spacing:5px;
+    margin-top:45px;
+    margin-left:75px;
+}
+
+/* city tour title - 제목 밑에 직선 */
+#content .cityTour .subject3:after {
+    content:'';
+    display:block;
+    width:115px;
+    border-bottom:8px solid #ffe0e0;
+    padding-top:20px;
+}
+/* city tour title - 마우스 오버 효과 */
+#content .cityTour .subject3:hover {
+    color:#ff8784;
+    transition:all 0.8s ease;
+}
+
+/* tour title - mediaquery */
+@media screen and (min-width:769px) and (max-width:1024px) {
+    /* tour title - 설명 */
+    #content .tour .message {
+        font-size:11px;
+        color:#ffeded;
+        line-height:22px;
+        margin-top:30px;
+        margin-left:80px;
+    }
+}
+@media screen and (min-width:761px) and (max-width:768px) {
+    /* tour title - 설명 */
+    #content .tour .message {
+        width:200px;
+        font-size:11px;
+        color:#ffeded;
+        line-height:22px;
+        margin-top:30px;
+        margin-left:80px;
+    }
+    
+    /* art tour title - 제목 */
+    #content .artTour .subject2 {
+        margin-top:200px;
+    }
+}
+@media screen and (min-width:361px) and (max-width:760px) {
+    /* tour title - 제목 */
+    #content .tour .subject1 {
+        font-size:25px;
+        margin-top:370px;
+        margin-left:55px;
+    }
+    
+    /* tour title - 제목 밑에 직선 */
+    #content .tour .subject1:after {
+        content:'';
+        display:none;
+    }
+    
+    /* tour title - 설명 */
+    #content .tour .message {
+        display:none;
+    }
+    
+    /* art tour title - 제목 */
+    #content .artTour .subject2 {
+        font-size:25px;
+        margin-top:180px;
+        margin-left:25px;
+    }
+    
+    /* art tour title - 제목 밑에 직선 */
+    #content .artTour .subject2:after {
+        content:'';
+        display:none;
+    }
+    
+    /* city tour title - 제목 */
+    #content .cityTour .subject3 {
+        font-size:25px;
+        margin-top:180px;
+        margin-left:22px;
+    }
+    
+    /* city tour title - 제목 밑에 직선 */
+    #content .cityTour .subject3:after {
+        content:'';
+        display:none;
+    }
+}
+@media screen and (max-width:360px) {
+    /* tour title - 제목 */
+    #content .tour .subject1 {
+        font-size:20px;
+        margin-top:370px;
+        margin-left:25px;
+    }
+    
+    /* tour title - 제목 밑에 직선 */
+    #content .tour .subject1:after {
+        content:'';
+        display:none;
+    }
+    
+    /* tour title - 설명 */
+    #content .tour .message {
+        display:none;
+    }
+    
+    /* art tour title - 제목 */
+    #content .artTour .subject2 {
+        font-size:20px;
+        margin-top:180px;
+        margin-left:20px;
+    }
+    
+    /* art tour title - 제목 밑에 직선 */
+    #content .artTour .subject2:after {
+        content:'';
+        display:none;
+    }
+    
+    /* city tour title - 제목 */
+    #content .cityTour .subject3 {
+        font-size:20px;
+        margin-top:180px;
+        margin-left:20px;
+    }
+    
+    /* city tour title - 제목 밑에 직선 */
+    #content .cityTour .subject3:after {
+        content:'';
+        display:none;
+    }
+}
+
+
+/* footer */
+footer {
+    position:absolute;
+    z-index:9999;
+    top:695px;
+    left:70px;
+}
+#footer li {
+    display:inline;
+    padding:0 18px;
+    list-style-type:none;
+}
+
+/* footer - sns icon */
+#footer li .fab {
+    color:#ffe4e2;
+    font-size:25px;
+    opacity:0.8;
+}
+/* footer - sns icon - 마우스 오버 효과 */
+#footer li:first-child .fab:hover {
+    color:#3b5998;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li:nth-child(2) .fab:hover {
+    color:#cd486b;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li:nth-child(3) .fab:hover {
+    color:#c8232c;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li:nth-child(4) .fab:hover {
+    color:#86c9ef;
+    transition:all 1s ease;
+    transform:scale(1.15);
+}
+#footer li .fab:visited {
+    color:#e8c0be;
+}
+
+/* footer - copyright */
+#footer li:last-child {
+    display:inline-block;
+    position:absolute;
+    top:0;
+    left:320px;
+    width:300px;
+    color:#ffe4e2;
+    font-family:'Quicksand', sans-serif;
+    font-size:15px;
+    opacity:0.8;
+    line-height:25px;
+}
+
+/* footer - mediaquery */
+@media screen and (max-width:1024px) {
+    #footer {
+       display:none;
+    }
+}
